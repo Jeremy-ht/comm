@@ -1,0 +1,18 @@
+# 配置数据源的属性
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+---
+# 缓存配置
+spring:
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:config/ehcache.xml
+
