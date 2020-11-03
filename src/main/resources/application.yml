@@ -1,3 +1,6 @@
+server:
+  port: 9000
+
 # 配置数据源的属性
 spring:
   datasource:
@@ -6,7 +9,6 @@ spring:
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
-
 
 ---
 # 缓存配置
