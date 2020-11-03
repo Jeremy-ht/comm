@@ -1,0 +1,558 @@
+E85113
+66D9EF
+B7E85E
+AE81FF
+
+
+
+安装cnpm			https://blog.csdn.net/weixin_44924173/article/details/90312659
+	
+端口占用			netstat -ano|findstr 8080	//	netstat -ano
+	
+Linux安装mysql		https://www.jianshu.com/p/157ad249cdcb
+	
+FastJson			https://blog.csdn.net/xuforeverlove/article/details/80842148
+	
+Oracle解锁			ALTER USER QHDXSHOP ACCOUNT UNLOCK;
+	
+LICEcap				GIF
+
+CXF客户端生成		https://www.cnblogs.com/shaosks/p/9617401.html
+
+IDEA项目打包：		https://blog.csdn.net/github_38336924/article/details/82422888
+idea控制台乱码：	-Dfile.encoding=UTF-8
+=========================================================== eclipse快捷键 ===========================================================
+Shift+Alt+s		生成get/set
+Ctrl+1			动补全对应的引用
+Ctrl+Alt+↓		复制当前行到下一行
+Ctrl+Shift+F	格式化代码
+	
+=========================================================== meno ===========================================================
+Java基础
+
+spring
+
+springmvc
+
+mybatis
+
+springboot
+
+杂识
+
+
+
+
+
+
+
+
+
+===========================================================*** Git ***===========================================================
+本机配置git：
+	1、GitHub上注册一个账号，记住用户名和邮箱
+	2、本地安装git
+	3、配置git
+		- # 配置用户名	git config --global user.name "username"    //（ "username"是自己的账户名，）
+		- # 配置邮箱 	git config --global user.email "username@email.com"     //("username@email.com"注册账号时用的邮箱)
+		- 以上命令执行结束后，可用 git config --global --list 命令查看配置是否OK
+	4、生成ssh
+		- ssh-keygen -t rsa		回车三次即可	ssh-keygen -t rsa -C "youremail@example.com"
+		- 在c盘用户目录找文件夹 .ssh 里面有两个文件，一个秘钥(id_rsa) 一个公钥(id_rsa.pub)
+		- 将ssh文件夹中的公钥（id_rsa.pub）添加到GitHub管理平台中，
+		- 测试一下配置是否成功		ssh -T git@github.com
+
+		
+上传项目：
+	1、在GitHub上创建一个项目
+	2、进入上传项目中打开 Git base here
+		- git init
+		- git add .
+		- git status
+		- git commit -m "这里面写你的注释"
+		- github上添加 SSH Key		
+				github：Settings -》SSH and GPG KEYS -》New SSH key -》Title里面随便填，Key添加公钥
+		- git remote add origin 仓库地址
+		- git push -u origin master(现在默认分支是 main)
+
+
+IDEA使用git：
+	
+	
+拉取master分支项目到本地：	git clone -b master 地址
+
+
+
+
+
+
+
+===========================================================*** Word ***===========================================================
+shipment		运送，运输
+cart			运货马车
+Relation		关系
+Inspection		检查
+recent			最近的，近来的
+
+Elastic			弹性的
+Compute			计算
+Service			服务
+Match			匹配
+Dynamic 		动态的	
+
+Schema			模式;架构;
+compare			比较;对比;
+Corporation		公司
+deploy			部署
+Relation 		关系
+
+swap			交换
+
+
+schema			(计划或理论的)提要，纲要；架构
+analyzer		分析仪
+mark			作记号
+assist			帮助	
+agreement		协议
+Structure		结构
+
+daemon			守护程序
+Atomic			原子的
+
+refresh			刷新
+Monitor			监视器
+Prepare this context for refreshing.	准备刷新此上下文。
+
+
+
+obtain			获得
+used by			使用人
+
+
+
+
+pipeline		管道
+
+===========================================================***  ***===========================================================
+EhCache:
+		https://blog.csdn.net/Lammonpeter/article/details/78602862?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.channel_param
+
+RSA		非对称加密		http://www.ruanyifeng.com/blog/2013/06/rsa_algorithm_part_one.html
+AES		对称加密		https://blog.csdn.net/gulang03/article/details/81175854
+
+
+
+
+
+
+===========================================================*** CSS ***===========================================================
+•••transform:
+		旋转rotate、扭曲skew、缩放scale和移动translate以及矩阵变形matrix。
+		https://blog.csdn.net/qq_24189933/article/details/79293870
+		
+
+		
+•••calc() 函数:
+		width: calc(100% - 20px);
+		- css3 的 calc()函数。这里的意思是设置宽度比100%的宽度少20px。
+		- calc()函数用于动态计算长度值。
+		- calc()函数支持 "+", "-", "*", "/" 运算；
+		- calc()函数使用标准的数学运算优先级规则；
+		
+•••水平垂直居中：
+	1. display: flex;
+	   margin: auto;
+
+	2. display: grid;
+	   place-items: center;
+	   
+
+•••文本居中：text-align:center
+•••块元素居中：margin：0 auto
+
+•••列表的 marker 属性：小圆点的颜色
+	li::marker {
+		color: #ccc;
+	}
+	
+	或者使用伪类
+	
+	li::before {
+		content: "•";
+		color: #ccc;
+		margin-right: 0.5em;
+	}
+
+	
+•••css3 文字过长用...代替
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		
+•••CSS中:和:: 一个冒号是伪类，两个冒号是伪元素	https://blog.csdn.net/sinat_36146776/article/details/53138178
+		伪类
+			:link 			
+			伪类将应用于未被访问过的链接，与:visited互斥。
+			
+			:hover 			
+			伪类将应用于有鼠标指针悬停于其上的元素。
+			
+			:active 		
+			伪类将应用于被激活的元素，如被点击的链接、被按下的按钮等。
+			
+			:visited		
+			伪类将应用于已经被访问过的链接，与:link互斥。
+			
+			:focus 			
+			伪类将应用于拥有键盘输入焦点的元素。
+			
+			:first-child 	
+			伪类将应用于元素在页面中第一次出现的时候。
+			
+			:lang 			
+			伪类将应用于元素带有指定lang的情况。
+			
+			
+		伪元素
+			::first-letter
+			伪元素的样式将应用于元素文本的第一个字（母）。
+
+			::first-line
+			伪元素的样式将应用于元素文本的第一行。
+			
+			::before
+			在元素内容的最前面添加新内容。
+
+			::after
+			在元素内容的最后面添加新内容。
+
+
+•••border-radius  创建圆角
+			border-radius：n1, n2, n3, n4 
+			border-radius: 25%;
+			
+•••box-shadow 添加阴影
+			box-shadow: x轴偏移 y轴偏移 模糊距离 阴影颜色 阴影开始方向（默认是从里往外，设置inset就是从外往里）
+			box-shadow: 10px 10px 5px #888888 inset; 
+
+
+•••background-image	添加背景图片
+			background-image: url, 定位, 平铺
+
+
+•••background-size	指定背景图像的大小。CSS3以前，背景图像大小由图像的实际大小决定
+			background-size: 宽 高
+
+•••background: linear-gradient(direction, color-stop1, color-stop2, ...); 渐变
+			**从上到下：**从顶部开始的线性渐变。起点是红色，慢慢过渡到蓝色、
+			background: linear-gradient(red, blue); /* 标准的语法 */ 
+
+			
+			**从左到右：**从左边开始的线性渐变。起点是红色，慢慢过渡到蓝色
+			background: linear-gradient(to right, red , blue); /* 标准的语法 */ 
+			
+CSS3文本效果
+•••text-shadow 文本阴影
+			text-shadow: 水平阴影，垂直阴影，模糊的距离，阴影的颜色、
+			text-shadow: 5px 5px 5px #FF0000;
+
+•••text-overflow 指定应向用户如何显示溢出内容
+			text-overflow: clip|ellipsis|string;
+			clip： 修剪文本
+			ellipsis：显示省略符号来代表被修剪的文本
+			string：使用给定的字符串来代表被修剪的文本
+
+•••word-wrap 自动换行属性允许您强制文本换行 - 即使这意味着分裂它中间的一个字
+			word-wrap: normal|break-word;
+			normal：只在允许的断字点换行（浏览器保持默认处理）
+			break-word：在长单词或 URL 地址内部进行换行
+
+•••outline-offset 简单来说就是在边框 border 外面又加了一层
+			outline-offset: length|inherit		轮廓与边框边缘的距离。| 规定应从父元素继承 outline-offset 属性的值。
+
+			
+CSS3 媒体查询
+•••@media 媒体查询 很多就是用来进行响应式开发了		https://blog.csdn.net/gtlishujie/article/details/81975157
+			@media 媒体类型 and (条件) 
+			{
+			
+			}
+
+•••a 标签属性	
+	href属性：规定链接指向的页面的 URL。    
+	target属性：_blank 新窗口打开链接
+	text-decoration:none 删除下划线
+
+边距：
+•••margin:上 右 下 左 (顺时针);(4)		margin:上 左右 下;(3)		margin:上下 左右;(2)	margin:上下左右;(1)
+
+
+
+
+
+
+
+
+			
+=================================================================			
+1. img标签下面的小空隙
+	原因：
+		img是一种类似text的标签元素，在结束的时候，会在末尾加上一个空白符（匿名文本），导致下方会多出来 3px 间距
+	修复：
+		· 给img设置vertical-align为除baseline以外的值，常用
+		· 给img添加display:block; 这个方法是我们比较常用，但需要注意，img一旦设置为块，text-align:center；就不再生效，图片的水平居中应使用margin:auto;	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
+
+	
+			
+=================================================================	
+		
+--- 啥是对象的浅度克隆和深度克隆？	https://blog.csdn.net/pzjtian/article/details/107501639
+
+--- 枚举到底是个什么鬼类型？		https://blog.csdn.net/pzjtian/article/details/107601000
+
+
+
+
+
+
+
+
+
+
+==================================================================================================================================
+Vue
+==================================================================================================================================
+join(' ')是重组的意思，把数组合成一个字符串
+
+
+•••CDN:
+	最新版：	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	指定版本：	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	生产环境：	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+•••常用指令：
+	{{}}		插值表达式
+	v-cloak		解决插值表达式闪烁的问题
+				 [v-cloak] {
+					display: none;
+				 }
+				 
+	v-text		和插值一样也是使用vue中的变量，但是默认没有闪缩问题，但是会覆盖原本的内容，插值不会
+	v-html		显示HTML的内容
+	v-bind		Vue提供的属性绑定机制，缩写是 ':'，属性中的内容其实写的是js表达式，可以写合法的JS表达式
+	v-on		Vue提供的事件绑定机制，缩写是 '@'
+	v-show		display:none	css的修改
+	v-if		真实DOM切换	有较高的切换性能消耗
+•••条件渲染
+
+	v-show
+	作用： v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS display 属性。
+	示例：
+
+	v-if
+	作用：v-if用于条件性地渲染一块内容。如果在初始渲染时条件为假，则这一块内容什么也不做直到条件为真时，才开始渲染条件块。
+	注意：如果想一同切换多个元素，可以把一个 <template> 元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 <template> 元素。
+	示例：
+	
+		区别：
+		•v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
+		•v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
+		•一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
+
+	v-else
+	作用：v-else和 v-if 或 v-else-if一起使用，可以使用v-else指令来表示 v-if 的“else 块”
+	注意：v-else元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。
+	示例：
+	
+	
+•••列表渲染
+
+	v-for
+	作用：v-for 指令基于一个数组来渲染一个列表。v-for 指令需要使用v-for="item in items"形式的特殊语法，其中 items 是源数据数组，而 item 则是被迭代的数组元素的别名。
+		v-for 还支持一个可选的第二个参数，即当前项的索引,v-for="(item, index) in items"。
+		v-for也可以是一个对象，可以有三个参数，v-for="(value, name, index) in object"，值value，键name，索引index。
+	注意：在使用v-for遍历时，需要为每项提供一个唯一key属性。<li v-for="item in items" :key="item.id">
+	示例：
+	
+		为什么要可以属性key？
+			如果不使用 key，Vue 会使用一种最大限度减少动态元素并且尽可能的尝试就地修改/复用相同类型元素的算法。而使用 key 时，它会基于 key 的变化重新排列元素顺序，并且会移除 key 不存在的元素。
+		注意：不要使用对象或数组之类的非基本类型值作为 v-for 的 key。请用字符串或数值类型的值。
+		
+•••事件处理	
+	
+	v-on	先使用加减案例  写在事件函数里，再用methods方法写		https://cn.vuejs.org/v2/guide/events.html#%E7%9B%91%E5%90%AC%E4%BA%8B%E4%BB%B6
+	缩写：@
+	作用：v-on 绑定事件监听器，并在触发时运行一些 JavaScript 代码。类似于JavaScript里的onclick、onchange事件，但他提供了更强大简便的方式。
+	注意：v-on指令Vue还提供了很多的修饰符，下面一节我们将细讲。
+	示例：
+	
+	
+•••样式绑定	
+	
+	v-bind
+	缩写：:
+	作用：v-bind指令主要用于动态绑定 DOM 元素属性，即元素属性实际的值是由实例中的 data 属性提供的。
+	注意：v-on指令Vue还提供了很多的修饰符，下面一节我们将细讲。
+	示例：
+	
+
+•••表单绑定	
+	v-model
+	作用：v-model 指令在表单控件或者组件上创建双向数据绑定，它会根据控件类型自动选取正确的方法来更新元素。
+	注意：
+	示例：
+	
+•••模板语法	
+
+	v-text
+	作用：更新元素的 textContent。v-text会覆盖掉原来元素内容，如果要更新部分的 textContent，需要使用 {{ Mustache }} 插值。而与直接使用 {{Mustache}} 不同的是，v-text需要绑定在某个元素上，这样能避免未编译前的闪现问题。
+	示例：
+	
+	v-html
+	作用：更新元素的 innerHTML，接受的字符串不会进行编译等操作，会按普通 HTML 处理。如果使用大量的v-html 来组合模板，不便于我们阅读代码，后面我们会学习组件来替代它。
+	注意：在网站上动态渲染任意 HTML 是非常危险的，因为容易导致 XSS 攻击。只在可信内容上使用 v-html，永不用在用户提交的内容上。（*）
+	示例：
+	
+	v-once		只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。
+		https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E9%80%9A%E8%BF%87-v-once-%E5%88%9B%E5%BB%BA%E4%BD%8E%E5%BC%80%E9%94%80%E7%9A%84%E9%9D%99%E6%80%81%E7%BB%84%E4%BB%B6
+	
+	
+	
+	v-pre	跳过这个元素和它的子元素的编译过程。可以用来显示原始 Mustache 标签。跳过大量没有指令的节点会加快编译。
+	
+	v-cloak		前面我们提过，在使用插值表达式闪烁的问题，v-cloak 配合CSS [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 	标签直到实例准备完毕。解决了插值表达式闪烁的问题。
+	
+	
+
+	
+•••事件修饰符：
+	.stop		阻止冒泡
+	.prevent	阻止默认事件
+	.capture	添加事件侦听器时使用事件捕获模式
+	.self		只当事件在该元素本身(比如不是子元素)触发时触发回调
+	.once		事件只触发一次
+	
+	
+	
+•••计算属性和侦听器:
+	对于任何复杂逻辑，你都应当使用计算属性。
+	计算属性是基于它们的响应式依赖进行缓存的
+	
+	
+	
+•••数组：
+	0. 想要显示一个数组经过过滤或排序后的版本，而不实际变更或重置原始数据。在这种情况下，可以创建一个计算属性，
+	   来返回过滤或排序后的数组。在计算属性不适用的情况下 (例如，在嵌套 v-for 循环中) 你可以使用一个方法
+	
+	1.push：添加元素
+		this.arrs.push('aaa')
+		this.arrs.push('aaaa', 'bbbb', 'cccc')
+
+    2.pop(): 删除数组中的最后一个元素
+		this.arrs.pop();
+
+    3.shift(): 删除数组中的第一个元素
+		this.arrs.shift();
+
+    4.unshift(): 在数组最前面添加元素
+		this.arrs.unshift()
+		this.arrs.unshift('aaa', 'bbb', 'ccc')
+
+    5.splice作用: 删除元素/插入元素/替换元素
+		删除元素: 第二个参数传入你要删除几个元素(如果没有传,就删除后面所有的元素)
+		替换元素: 第二个参数, 表示我们要替换几个元素, 后面是用于替换前面的元素
+		插入元素: 第二个参数, 传入0, 并且后面跟上要插入的元素
+        this.arrs.splice(1, 3, 'm', 'n', 'l', 'x')	// 替换
+        this.arrs.splice(1, 0, 'x', 'y', 'z')	// 插入
+
+	6.sort()
+		this.arrs.sort()
+
+	7.reverse()
+		this.arrs.reverse()
+
+        注意: 通过索引值修改数组中的元素不是响应式的 使用Vue.set()
+        this.arrs[0] = 'bbbbbb';
+        this.arrs.splice(0, 1, 'bbbbbb')
+        
+		set(要修改的对象, 索引值, 修改后的值)
+        Vue.set(this.arrs, 0, 'bbbbbb')		vm.$set(vm.items, indexOfItem, newValue)
+
+	
+	8. 循环数组常用方法：
+		forEach		不可终止循环
+		some		返回true终止循环
+		findIndex	返回true可以终止循环，返回满足条件的索引
+		filter		过滤数组，返回过滤后的数组	
+
+
+	
+
+
+
+	
+•••过渡 & 动画	Velocity.js	/ Animate.css
+
+	transition
+	
+	v-enter：定义进入过渡的开始状态。在元素被插入之前生效，在元素被插入之后的下一帧移除。
+
+	v-enter-active：定义进入过渡生效时的状态。在整个进入过渡的阶段中应用，在元素被插入之前生效，在过渡/动画完成之后移除。
+	这个类可以被用来定义进入过渡的过程时间，延迟和曲线函数。
+
+	v-enter-to：2.1.8 版及以上定义进入过渡的结束状态。在元素被插入之后下一帧生效 (与此同时 v-enter 被移除)，在过渡/动画完成之后移除。
+
+	v-leave：定义离开过渡的开始状态。在离开过渡被触发时立刻生效，下一帧被移除。
+
+	v-leave-active：定义离开过渡生效时的状态。在整个离开过渡的阶段中应用，在离开过渡被触发时立刻生效，在过渡/动画完成之后移除。
+	这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。
+
+	v-leave-to：2.1.8 版及以上定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave 被删除)，在过渡/动画完成之后移除。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
