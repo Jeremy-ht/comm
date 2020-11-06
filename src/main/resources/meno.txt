@@ -1,7 +1,13 @@
+E85113
+66D9EF
+B7E85E
+AE81FF
 
-安装cnpm			    https://blog.csdn.net/weixin_44924173/article/details/90312659
+
+
+安装cnpm			https://blog.csdn.net/weixin_44924173/article/details/90312659
 	
-端口占用			    netstat -ano|findstr 8080	//	netstat -ano
+端口占用			netstat -ano|findstr 8080	//	netstat -ano
 	
 Linux安装mysql		https://www.jianshu.com/p/157ad249cdcb
 	
@@ -11,22 +17,16 @@ Oracle解锁			ALTER USER QHDXSHOP ACCOUNT UNLOCK;
 	
 LICEcap				GIF
 
-CXF客户端生成		    https://www.cnblogs.com/shaosks/p/9617401.html
+CXF客户端生成		https://www.cnblogs.com/shaosks/p/9617401.html
 
 IDEA项目打包：		https://blog.csdn.net/github_38336924/article/details/82422888
-idea控制台乱码：	    -Dfile.encoding=UTF-8
+idea控制台乱码：	-Dfile.encoding=UTF-8
 =========================================================== eclipse快捷键 ===========================================================
-Shift+Alt+s		    生成get/set
-Ctrl+1			    动补全对应的引用
-Ctrl+Alt+↓		    复制当前行到下一行
-Ctrl+Shift+F	    格式化代码
-
-
-E85113
-66D9EF
-B7E85E
-AE81FF
-
+Shift+Alt+s		生成get/set
+Ctrl+1			动补全对应的引用
+Ctrl+Alt+↓		复制当前行到下一行
+Ctrl+Shift+F	格式化代码
+	
 =========================================================== meno ===========================================================
 Java基础
 
@@ -49,7 +49,7 @@ springboot
 
 
 ===========================================================*** Git ***===========================================================
-•••本机配置git：
+本机配置git：
 	1、GitHub上注册一个账号，记住用户名和邮箱
 	2、本地安装git
 	3、配置git
@@ -63,7 +63,7 @@ springboot
 		- 测试一下配置是否成功		ssh -T git@github.com
 
 		
-•••上传项目：
+上传项目：
 	1、在GitHub上创建一个项目
 	2、进入上传项目中打开 Git base here
 		- git init
@@ -76,7 +76,7 @@ springboot
 		- git push -u origin master(现在默认分支是 main)
 
 
-•••IDEA使用git：
+IDEA使用git：
 	
 	
 拉取master分支项目到本地：	git clone -b master 地址
@@ -127,6 +127,9 @@ Prepare this context for refreshing.	准备刷新此上下文。
 
 obtain			获得
 used by			使用人
+
+
+
 
 pipeline		管道
 
@@ -517,6 +520,153 @@ join(' ')是重组的意思，把数组合成一个字符串
 	这个类可以被用来定义离开过渡的过程时间，延迟和曲线函数。
 
 	v-leave-to：2.1.8 版及以上定义离开过渡的结束状态。在离开过渡被触发之后下一帧生效 (与此同时 v-leave 被删除)，在过渡/动画完成之后移除。
+
+
+
+
+
+
+
+
+
+
+
+
+
+==================================================================================================================================
+Redis
+==================================================================================================================================
+命令：
+
+•••获取所有配置项			CONFIG GET *
+•••修改配置					CONFIG set
+•••切换数据库(0-15)			select 0
+
+
+•••删除 key					del key
+
+•••序列化给定 key			dump key
+
+•••检查key是否存在			exists key
+
+•••给key设置过期时间(秒)	expire key seconds
+
+•••给key设置过期时间(毫秒)	pexpire key seconds
+
+•••以秒为单位返回key的剩余的过期时间	ttl key
+
+•••以毫秒为单位返回key的剩余的过期时间	pttl key
+
+•••移除 key 的过期时间		persist key
+
+•••查看所有存在的key		keys *
+
+•••将当前数据库的key移动到给定的数据库 db 当中	move key db
+
+•••从当前数据库中随机返回一个key		randomkey	
+
+•••修改key的名称			rename keyname newkeyname
+
+•••返回key所储存的值的类型		type key		
+
+
+==========================================
+字符串(String)
+==========================================
+•••set key value				设置指定 key 的值
+
+•••get key						获取指定 key 的值
+
+•••getset key newvalue			设置新值替换旧值
+
+•••getrange key start end		获取索引范围值
+
+•••mget key1 [key2..]			获取所有(一个或多个)给定key的值
+
+•••mset key v [key v ...]		同时设置一个或多个 key-value 对
+
+•••setnx key v					当 key 不存在时设置 key 的值
+
+•••msetnx key v [key v ...]		同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在
+
+•••setex key seconds value		设置值并设置值过期时间(以秒为单位)
+
+•••setrange key offset value	替换指定位置值
+
+•••strlen						返回 key 所储存的字符串值的长度
+	
+•••incr key						将 key 中储存的数字值增一
+
+•••incrby key num				将 key 所储存的值加上给定的增量值
+
+•••dincr key					key 中储存的数字值减一
+
+•••incrby key num				key 所储存的值减去给定的减量值
+
+•••APPEND key value				如果 key 已经存在并且是一个字符串， APPEND 命令将指定的 value 追加到该 key 原来值（value）的末尾
+
+
+
+
+==========================================
+字符串(String)
+==========================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
