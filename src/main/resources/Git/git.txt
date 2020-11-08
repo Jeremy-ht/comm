@@ -1,0 +1,40 @@
+git config --global user.email "你自己的邮箱"
+git config --global user.name "你自己的名字"
+
+ssh-keygen -t rsa -C 你自己的邮箱
+
+git init
+git clone 
+
+git add *
+git commit -m "备注"
+git push origin master
+git pull origin master
+
+
+查看工作区的状态
+	git status	
+切换到此分支	
+	git checkout 分支名		
+创建分支并切换到此分支		
+	git checkout -b 分支名	
+查看所有分支	
+	git branch		
+
+本地项目和GitHub项目连接	
+	git remote add origin 项目路径
+	git push -u origin master
+	
+合并分支
+	需要把哪个分支合并到此分支，先切换到此分支，然后合并
+	例如：把login分支合并到主分支master分支中
+	
+	git checkout master 		切换到master分支
+	git merge login				合并login分支
+	git push 					提交到云仓库
+
+
+
+
+
+
