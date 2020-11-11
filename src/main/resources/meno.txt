@@ -21,6 +21,8 @@ CXF客户端生成		https://www.cnblogs.com/shaosks/p/9617401.html
 
 IDEA项目打包：		https://blog.csdn.net/github_38336924/article/details/82422888
 idea控制台乱码：	-Dfile.encoding=UTF-8
+
+Java8				https://blog.51cto.com/14866389/2518771
 =========================================================== eclipse快捷键 ===========================================================
 Shift+Alt+s		生成get/set
 Ctrl+1			动补全对应的引用
@@ -570,9 +572,9 @@ Redis
 •••返回key所储存的值的类型		type key		
 
 
-==========================================
+====================================================================================
 字符串(String)
-==========================================
+====================================================================================
 •••set key value				设置指定 key 的值
 
 •••get key						获取指定 key 的值
@@ -608,29 +610,67 @@ Redis
 
 
 
-==========================================
-字符串(String)
-==========================================
+====================================================================================
+哈希(Hash)
+====================================================================================
+•••hdel key field1 [field2]					删除一个或多个哈希表字段
+
+•••hexists key field						查看key中指定的字段是否存在
+
+•••hmset key field1 value1 [field2 value2 ]	同时将多个 field-value (域-值)对设置到哈希表 key 中
+
+•••hset key field value						将哈希表 key 中的字段 field 的值设为 value
+
+•••hsetnx key field value					只有在字段 field 不存在时，设置哈希表字段的值
+
+•••hget key field							获取存储在哈希表中指定字段的值
+
+•••hmget key field1 [field2]				获取所有给定字段的值
+
+•••hgetall key								获取在哈希表中指定 key 的所有字段和值
+
+•••hkeys key								获取所有哈希表中的字段
+
+•••hvals key								获取哈希表中所有值
+
+•••hincrby key field increment				为哈希表 key 中的指定字段的整数值加上增量 increment
+
+•••hlen key									获取哈希表中字段的数量
+
+•••hscan key cursor [MATCH pattern] [COUNT count]		迭代哈希表中的键值对
 
 
 
 
+====================================================================================
+列表(List)		 (操作类似于栈)
+====================================================================================
+•••BLPOP key1 [key2 ] timeout				移出并获取列表的第一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止
+•••BRPOP key1 [key2 ] timeout				移出并获取列表的最后一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止
+•••LPOP key									移出并获取列表的第一个元素
+•••RPOP key									移出并获取列表的最后一个元素
 
+•••LPUSH key value1 [value2]				将一个或多个值插入到列表头部
+•••RPUSH key value1 [value2]				在列表中添加一个或多个值
 
+•••LPUSHX key value							将一个值插入到已存在的列表头部
+•••RPUSHX key value							将一个值插入到已存在的列表尾部
 
+•••BRPOPLPUSH source destination timeout	从列表中弹出一个值，将弹出的元素插入到另外一个列表中并返回它； 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止
+•••RPOPLPUSH source destination				移除列表的最后一个元素，并将该元素添加到另一个列表并返回
 
+•••LINDEX key index							通过索引获取列表中的元素
 
+•••LINSERT key BEFORE|AFTER pivot value		在列表的元素前或者后插入元素
+•••LRANGE key start stop					获取列表指定范围内的元素
 
+•••LREM key count value						移除列表元素
 
+•••LSET key index value						通过索引设置列表元素的值
 
+•••LTRIM key start stop						对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除
 
-
-
-
-
-
-
-
+•••LLEN key									获取列表长度
 
 
 
