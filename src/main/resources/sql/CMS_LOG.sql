@@ -1,0 +1,68 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : SzhtShop
+ Source Server Type    : Oracle
+ Source Server Version : 110200
+ Source Host           : 114.115.153.238:1521
+ Source Schema         : RENHAO
+
+ Target Server Type    : Oracle
+ Target Server Version : 110200
+ File Encoding         : 65001
+
+ Date: 26/11/2020 17:10:27
+*/
+
+
+-- ----------------------------
+-- Table structure for CMS_LOG
+-- ----------------------------
+DROP TABLE "RENHAO"."CMS_LOG";
+CREATE TABLE "RENHAO"."CMS_LOG" (
+  "LOG_ID" NUMBER(20) NOT NULL ,
+  "USER_ID" NUMBER(20) ,
+  "CREATE_TIME" DATE ,
+  "SPEND_TIME" NUMBER(11) ,
+  "METHOD" NVARCHAR2(64) ,
+  "USER_AGENT" NVARCHAR2(255) ,
+  "USER_IP" NVARCHAR2(64) ,
+  "URL" NVARCHAR2(255) ,
+  "OPT_CONTENT" VARCHAR2(255 BYTE) 
+)
+TABLESPACE "SZHT"
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 3145728 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."LOG_ID" IS '日志ID';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."USER_ID" IS '管理员ID';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."CREATE_TIME" IS '创建时间';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."SPEND_TIME" IS '耗时';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."METHOD" IS '请求类型';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."USER_AGENT" IS '用户标识';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."USER_IP" IS '用户IP';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."URL" IS '请求路径';
+COMMENT ON COLUMN "RENHAO"."CMS_LOG"."OPT_CONTENT" IS '请求内容';
+COMMENT ON TABLE "RENHAO"."CMS_LOG" IS '日志记录表';
+
+-- ----------------------------
+-- Primary Key structure for table CMS_LOG
+-- ----------------------------
+ALTER TABLE "RENHAO"."CMS_LOG" ADD CONSTRAINT "SYS_C0012080" PRIMARY KEY ("LOG_ID");
+
+-- ----------------------------
+-- Checks structure for table CMS_LOG
+-- ----------------------------
+ALTER TABLE "RENHAO"."CMS_LOG" ADD CONSTRAINT "SYS_C0012079" CHECK ("LOG_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;

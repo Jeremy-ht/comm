@@ -1,0 +1,62 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : SzhtShop
+ Source Server Type    : Oracle
+ Source Server Version : 110200
+ Source Host           : 114.115.153.238:1521
+ Source Schema         : RENHAO
+
+ Target Server Type    : Oracle
+ Target Server Version : 110200
+ File Encoding         : 65001
+
+ Date: 26/11/2020 17:13:48
+*/
+
+
+-- ----------------------------
+-- Table structure for OS_USER_LOGIN_LOG
+-- ----------------------------
+DROP TABLE "RENHAO"."OS_USER_LOGIN_LOG";
+CREATE TABLE "RENHAO"."OS_USER_LOGIN_LOG" (
+  "LOG_ID" NUMBER(20) NOT NULL ,
+  "LOGIN_TIME" DATE ,
+  "USER_IP" NVARCHAR2(20) ,
+  "USER_ID" NUMBER(20) ,
+  "OPERATING_SYSTEM" NVARCHAR2(50) ,
+  "BROWSER" NVARCHAR2(50) 
+)
+TABLESPACE "SZHT"
+LOGGING
+NOCOMPRESS
+PCTFREE 10
+INITRANS 1
+STORAGE (
+  INITIAL 3145728 
+  NEXT 1048576 
+  MINEXTENTS 1
+  MAXEXTENTS 2147483645
+  BUFFER_POOL DEFAULT
+)
+PARALLEL 1
+NOCACHE
+DISABLE ROW MOVEMENT
+;
+COMMENT ON COLUMN "RENHAO"."OS_USER_LOGIN_LOG"."LOG_ID" IS '登录日志ID';
+COMMENT ON COLUMN "RENHAO"."OS_USER_LOGIN_LOG"."LOGIN_TIME" IS '登录时间';
+COMMENT ON COLUMN "RENHAO"."OS_USER_LOGIN_LOG"."USER_IP" IS '登录IP';
+COMMENT ON COLUMN "RENHAO"."OS_USER_LOGIN_LOG"."USER_ID" IS '用户ID';
+COMMENT ON COLUMN "RENHAO"."OS_USER_LOGIN_LOG"."OPERATING_SYSTEM" IS '操作系统';
+COMMENT ON COLUMN "RENHAO"."OS_USER_LOGIN_LOG"."BROWSER" IS '浏览器';
+COMMENT ON TABLE "RENHAO"."OS_USER_LOGIN_LOG" IS '用户登录表';
+
+-- ----------------------------
+-- Primary Key structure for table OS_USER_LOGIN_LOG
+-- ----------------------------
+ALTER TABLE "RENHAO"."OS_USER_LOGIN_LOG" ADD CONSTRAINT "SYS_C0012255" PRIMARY KEY ("LOG_ID");
+
+-- ----------------------------
+-- Checks structure for table OS_USER_LOGIN_LOG
+-- ----------------------------
+ALTER TABLE "RENHAO"."OS_USER_LOGIN_LOG" ADD CONSTRAINT "SYS_C0012254" CHECK ("LOG_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;

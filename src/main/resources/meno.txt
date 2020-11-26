@@ -124,6 +124,9 @@ pipeline		管道
 
 
 
+ecommerce		电子商务
+integrated		综合的
+
 ===========================================================***  ***===========================================================
 EhCache:
 		https://blog.csdn.net/Lammonpeter/article/details/78602862?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.channel_param
